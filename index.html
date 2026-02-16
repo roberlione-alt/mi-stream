@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream Overlay Sin Banner</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Evita que aparezcan barras de scroll */
+            background-color: transparent; /* Importante para OBS */
+        }
+        iframe {
+            position: absolute;
+            /* AQUÍ ESTÁ EL TRUCO: */
+            top: -50px; /* Sube el iframe 50 pixeles para ocultar el banner de Google */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 50px); /* Compensamos el tamaño para que no quede corto abajo */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://script.google.com/macros/s/AKfycby1nal4AAifysfF9K0GHJzU9lkWW9Oj35kmVNr4F0qxQD55y2q5wZJk7taRgIKkek-G1g/exec?p=output"></iframe>
+</body>
+</html>
